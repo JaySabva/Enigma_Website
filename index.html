@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link id="style" rel="stylesheet" href="style.css" />
+    <title>Enigma Machine</title>
+  </head>
+  <body>
+    <div id="main">
+      <div id="heading">
+        <h1>Enigma Machine</h1>
+      </div>
+      <div class="rotor-container">
+        <div class="rotor">
+          <h3>Left Rotor</h3>
+          <select
+            name="rotor"
+            id="leftRotorType"
+            onchange="updateRotorType('left')"
+          >
+            <option value="I">I</option>
+            <option value="II">II</option>
+            <option value="III">III</option>
+            <option value="IV">IV</option>
+            <option value="V">V</option>
+            <option value="VI">VI</option>
+            <option value="VII">VII</option>
+            <option value="VIII">VIII</option>
+          </select>
+          <br />
+          <button class="rotor-sign" onclick="updateRotorPos('left', 'inc')">
+            +
+          </button>
+          <p class="rotor-content" id="leftRotorPos">0</p>
+          <button class="rotor-sign" onclick="updateRotorPos('left', 'dec')">
+            -
+          </button>
+        </div>
+
+        <div class="rotor">
+          <h3>Middle Rotor</h3>
+          <select
+            name="rotor"
+            id="middleRotorType"
+            onchange="updateRotorType('middle')"
+          >
+            <option value="I">I</option>
+            <option value="II">II</option>
+            <option value="III">III</option>
+            <option value="IV">IV</option>
+            <option value="V">V</option>
+            <option value="VI">VI</option>
+            <option value="VII">VII</option>
+            <option value="VIII">VIII</option>
+          </select>
+          <br />
+          <button class="rotor-sign" onclick="updateRotorPos('middle', 'inc')">
+            +
+          </button>
+          <p class="rotor-content" id="middleRotorPos">0</p>
+          <button class="rotor-sign" onclick="updateRotorPos('middle', 'dec')">
+            -
+          </button>
+        </div>
+
+        <div class="rotor">
+          <h3>Right Rotor</h3>
+          <select
+            name="rotor"
+            id="rightRotorType"
+            onchange="updateRotorType('right')"
+          >
+            <option value="I">I</option>
+            <option value="II">II</option>
+            <option value="III">III</option>
+            <option value="IV">IV</option>
+            <option value="V">V</option>
+            <option value="VI">VI</option>
+            <option value="VII">VII</option>
+            <option value="VIII">VIII</option>
+          </select>
+          <br />
+          <button class="rotor-sign" onclick="updateRotorPos('right', 'inc')">
+            +
+          </button>
+          <p class="rotor-content" id="rightRotorPos">0</p>
+          <button class="rotor-sign" onclick="updateRotorPos('right', 'dec')">
+            -
+          </button>
+        </div>
+      </div>
+      <div class="relfectorType rotor-container">
+        <h3>Reflector</h3>
+        <br />
+        <select
+          name="reflector"
+          id="reflectorType"
+          onchange="updateReflector()"
+        >
+          <option value="B">B</option>
+          <option value="C">C</option>
+        </select>
+      </div>
+      <div class="pluboard rotor-container">
+        <!-- make a plugboard input with maxLenght 20 and it should check condition written in js whenever ther is a chaneg -->
+        <h3>Plugboard</h3>
+        <br />
+        <input
+          type="text"
+          id="plugboard"
+          name="plugboard"
+          placeholder="Enter plugboard settings"
+          maxlength="20"
+          oninput="updatePlugboard()"
+        />
+        <p1 id="plugboardError"></p1>
+      </div>
+      <div class="text">
+        <div class="input">
+          <h3>Enter the text to Encode</h3>
+          <textarea
+            placeholder="Enter something funny."
+            id="texti"
+            name="text"
+            rows="4"
+            style="
+              overflow: hidden;
+              word-wrap: break-word;
+              resize: none;
+              height: 160px;
+            "
+            oninput="newEnigma()"
+          ></textarea>
+        </div>
+        <div class="output">
+          <h3>Encoded Text</h3>
+          <textarea
+            readonly
+            placeholder="Magic Is Gone Happen."
+            id="texto"
+            name="text"
+            rows="4"
+            style="
+              overflow: hidden;
+              word-wrap: break-word;
+              resize: none;
+              height: 160px;
+            "
+          ></textarea>
+        </div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+  <footer>
+    <p>Made with ❤️ by Jay Sabva</p>
+  </footer>
+</html>

@@ -1,0 +1,194 @@
+/* Reset default margin and padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Courier New', monospace;
+    background-color: #000;
+    color: #00ff00;
+    margin: 0;
+    padding: 0;
+}
+
+#main {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: #111;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    overflow-y: auto;
+    /* Allow scrolling if content overflows */
+}
+
+#heading {
+    text-align: center;
+    padding: 10px;
+    margin: 0;
+    color: #00ff00;
+    background-color: #111;
+    width: 100%;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    position: sticky;
+    /* Keep the heading at the top of the view */
+    top: 0;
+    z-index: 100;
+    /* Ensure the heading is above other content */
+}
+
+.rotor-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #222;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    margin-top: 20px;
+    width: 80%;
+}
+
+.rotor {
+    border: 1px solid #333;
+    padding: 20px;
+    text-align: center;
+    width: 30%;
+    border-radius: 10px;
+    background-color: #333;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.rotor select {
+    padding: 5px;
+    font-size: 16px;
+    margin: 10px 0;
+    width: 100%;
+    background-color: #111;
+    color: #00ff00;
+    border: 1px solid #333;
+    border-radius: 5px;
+}
+
+.rotor-sign {
+    font-size: 24px;
+    background-color: #333;
+    border: none;
+    border-radius: 50%;
+    padding: 8px 12px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+    color: #00ff00;
+}
+
+.rotor-sign:hover {
+    background-color: #444;
+}
+
+.rotor-content {
+    font-size: 20px;
+    margin: 10px 0;
+    color: #00ff00;
+}
+
+.reflectorType {
+    text-align: center;
+    width: 100%;
+    color: #00ff00;
+}
+
+.pluboard {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #00ff00;
+}
+
+.pluboard input {
+    width: 80%;
+    padding: 10px;
+    font-family: 'Courier New', monospace;
+    font-size: 16px;
+    line-height: 1.4;
+    border: none;
+    border-radius: 10px;
+    resize: none;
+    background-color: #111;
+    color: #00ff00;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin-top: 10px;
+}
+
+.text {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 20px;
+    background-color: #222;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    width: 80%;
+    margin-top: 20px;
+}
+
+.text textarea {
+    width: 100%;
+    padding: 15px;
+    font-family: 'Courier New', monospace;
+    font-size: 16px;
+    line-height: 1.4;
+    border: none;
+    border-radius: 10px;
+    resize: none;
+    background-color: #000;
+    color: #00ff00;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.text textarea:focus {
+    outline: none;
+}
+
+
+
+#main {
+    position: relative;
+    /* Change absolute to relative positioning */
+    padding-bottom: 50px;
+    /* Add padding to create space for the footer */
+    /* Rest of the styles */
+}
+
+/* Footer styles */
+
+footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    background-color: #111;
+    padding: 10px;
+    color: #00ff00;
+    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.2);
+    z-index: 100;
+    /* Ensure the footer is above other content */
+}
+
+.input-output {
+    display: flex;
+    align-items: stretch;
+    justify-content: space-between;
+}
+
+.input,
+.output {
+    width: 48%;
+    /* Adjust as needed to leave space for padding and border */
+}
